@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const TodoItem = () => {
+class TodoItem extends Component {
+    render(){
+        const{title} = this.props;
     return ( 
        <div>
            <li className="list-group-item text-capitalize d-flex justify-content-between my-2">
-           <h5>Title</h5> 
+    <h5>{title}</h5> 
                <div className="todo-icon">
                     <span className="mx-2 text-success">
                         <i className="fas fa-pen">    
@@ -17,6 +19,8 @@ const TodoItem = () => {
            </li>
        </div>
      );
+    }
+ 
 }
  
 export default TodoItem;
